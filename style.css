@@ -1,0 +1,17 @@
+.title {
+  background-color: #34495e; }
+  .title p {
+    color: white;
+    margin: 0px 0px 0px 100px;
+    font-size: 8em; }
+
+.mainBody {
+  margin: 50px 0px 0px 50px; }
+  .mainBody .addBar p {
+    font-size: 2em; }
+  .mainBody .addBar .input {
+    width: 200px; }
+  .mainBody .mainList {
+    margin: 50px 0px 50px 80px; }
+
+/*# sourceMappingURL=style.css.map */

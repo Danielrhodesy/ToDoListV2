@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To Do List</title>
+    <!-- Style Sheets Linked-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <!--Body Starts-->
+  <body>
+    <div class="title">
+      <p>To Do List :)</p>
+    </div>
+    <div class="mainBody">
+      <!-- Addbar to add to the "To Do List" -->
+      <div class="addBar">
+        <p>Add to your list:</p>
+        <input id="item" type="text" placeholder="Enter and activity...">
+        <input id="add" type="submit" value="Add">
+      </div>
+      <!-- To Do List -->
+      <ol class="todo" id="todo">
+        <li>Food bruh
+          <div class="buttons">
+            <input class="remove" type="button" value="Delete">
+            <input class="check" type="button" value="Check">
+          </div>
+        </li>
+      </ol>
+      <!-- Checked Lists -->
+      <ul class="todo" id="checked">
+
+      </ul>
+    </div>
+
+    <!-- JavaScripts -->
+    <script src="js/script.js"></script>
+  </body>
+  <!--Body Ends-->
+
+</html>
