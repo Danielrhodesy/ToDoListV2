@@ -12,34 +12,57 @@ function removeItem() {
 
 }
 
-function checkItem() {
-  console.log(this);
+// User clicked on the Add Button
+// Add text inside item field to "To Do List"
+document.getElementById('add').addEventListener('click', function() {
+ var value = document.getElementById('item').value;
+ if (value) addItemTodo(value);
+});
+
+// Function to remove item
+function removeItem() {
+ console.log(this);
 }
 
+//Function to check item
+function checkItem() {
+ console.log(this);
+}
+
+
+
+//
 function addItemTodo(text) {
 
-  var list = document.getElementById('todo');
+ var list = document.getElementById('todo');
 
-  var item = document.createElement('li');
-  item.innerText = text;
+ var item = document.createElement('li');
+ item.innerText = text;
 
-  var buttons = document.createElement('div');
-  buttons.classList.add('buttons');
+ var buttons = document.createElement('DIV');
+ buttons.classList.add('buttons');
 
-  var remove = document.createElement('button');
-  remove.classList.add('remove');
+ var remove = document.createElement('BUTTON');
+ var t = document.createTextNode("Delete");
+ remove.appendChild(t);
+ document.body.appendChild(remove);
 
-  // Remove Item
-  remove.addEventListener('click', removeItem);
 
-  var check = document.createElement('button');
-  check.classList.add('check');
+ // Remove Item
+ remove.addEventListener('click', removeItem);
 
-  check.addEventListener('click', checkItem);
+ var check = document.createElement('BUTTON');
+ var t = document.createTextNode("Check");
+ check.appendChild(t);
+ document.body.appendChild(check);
 
-  buttons.appendChild(remove);
-  buttons.appendChild(checked);
-  item.appendChild(buttons);
 
-  list.insertBefore(item, list.childNodes[0]);
+ // Check Item
+ check.addEventListener('click', checkItem);
+
+ buttons.appendChild(remove);
+ buttons.appendChild(checked);
+ item.appendChild(buttons);
+
+ list.insertBefore(item, list.childNodes[0]);
 }
